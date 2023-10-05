@@ -62,21 +62,3 @@ resource "cloudflare_record" "httpbin" {
   value   = "httpbin.org"
   zone_id = var.cloudflare_zone_id
 }
-
-resource "cloudflare_record" "smh" {
-  name    = "smh"
-  proxied = true
-  ttl     = 1
-  type    = "CNAME"
-  value   = "smh.com.au"
-  zone_id = var.cloudflare_zone_id
-}
-
-resource "cloudflare_record" "www" {
-  name    = "www"
-  proxied = true
-  ttl     = 1
-  type    = "CNAME"
-  value   = "juice-shop.herokuapp.com"
-  zone_id = var.cloudflare_zone_id
-}
